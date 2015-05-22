@@ -45,7 +45,7 @@ public class tampilkanActivity extends LinearLayout {
                 getContext().startService(intent);
             }
         });
-// Berhenti
+// Berhenti service
         Button stop = (Button) findViewById(R.id.button2);
         stop.setOnClickListener(new OnClickListener() {
 

@@ -41,7 +41,7 @@ Credit + References + Thanks:
 
 Notes :
 
-- Please Respect My efforts
-- Include credit properly
-- Salam
+- Please Respect My efforts.
+- Include credit properly.
+- Salam.
 - Thank You.
