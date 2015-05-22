@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/background">
+	<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentTop="true" android:orientation="vertical" android:background="#90caffca">
+		<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#eeeeee" android:orientation="vertical">
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#ffd51cff" android:baselineAligned="false" android:gravity="center">
+				<TextView android:layout_width="wrap_content" android:layout_height="30dp" android:text="AppList | Pengaturan Icon" android:gravity="left|center" android:textColor="#ffffffff"/>
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/popup_window">
+				<ImageView android:id="@+id/imageView1" android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/suyono"/>
+				<TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_weight="7" android:gravity="center_vertical" android:text="Pratinjau" android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="#90ff471d"/>
+				<Button android:id="@+id/restore" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_weight="1" android:background="#d827c506" android:text="Default" android:textColor="#FFF" android:textSize="20sp"/>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#9082ff69" android:layout_margin="5dp">
+			<Button android:id="@+id/back_main" android:layout_width="50dp" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:background="#d827c506" android:text="OKE" android:textColor="#FFF"/>
+			<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<include layout="@layout/suyono"/>
+			</ScrollView>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

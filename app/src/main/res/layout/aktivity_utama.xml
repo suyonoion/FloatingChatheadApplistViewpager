@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/background" android:orientation="vertical" android:weightSum="1">
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#90fece70">
+		<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+			<ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/suyono" android:layout_marginRight="3dp"/>
+		</LinearLayout>
+		<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="fill_parent" android:layout_weight="1" android:gravity="left|center">
+			<TextView android:layout_width="fill_parent" android:layout_height="30dp" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Floating AppList &amp; Viewpager" android:gravity="left|center" android:textColor="#ffffffff" android:layout_weight="1"/>
+			<ImageButton android:id="@+id/imageView1" android:layout_width="32dp" android:layout_height="32dp" android:scaleType="centerCrop" android:src="@mipmap/github" android:contentDescription="Download Project" android:background="#00000000"/>
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="32dp" android:baselineAligned="false" android:layout_gravity="center_horizontal" android:gravity="center|end" android:layout_alignParentBottom="true">
+
+
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#90fece70">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1" android:background="@drawable/background_halaman">
+			<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Aplikasi List" android:layout_gravity="center_horizontal" android:background="#ff45c114" android:gravity="center" android:textColor="#ffffffff"/>
+			<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="fill_parent">
+				<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="fill_parent" android:layout_weight="2">
+					<ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ssapplist_mini" android:background="@drawable/background_halaman"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1" android:padding="2dp">
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1">
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Author" android:textSize="10sp" android:textColor="#d827c506"/>
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Kontak FB" android:textColor="#d827c506" android:textSize="10sp"/>
+						</LinearLayout>
+						<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1">
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=": Suyono (ion)" android:textColor="#d827c506" android:textSize="10sp"/>
+							<TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text=": suyono.ion" android:textStyle="italic" android:textSize="10sp" android:textColor="#d827c506"/>
+						</LinearLayout>
+					</LinearLayout>
+					<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+						<EditText android:layout_width="fill_parent" android:layout_height="fill_parent" android:ems="10" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:editable="false" android:textColor="#ffd014ff" android:text="@string/info_applist" android:textStyle="normal|italic" android:textSize="10sp"/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
+			<Button android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#d827c506" android:text="Mulai" android:textColor="#FFF" android:layout_marginRight="10dp" android:padding="5dp" android:layout_margin="2dp"/>
+			<Button android:id="@+id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/button1" android:layout_alignRight="@+id/button1" android:layout_below="@+id/button1" android:background="#d827c506" android:text="Stop" android:textColor="#FFF" android:layout_marginRight="10dp" android:padding="5dp" android:layout_margin="2dp"/>
+			<Button android:id="@+id/button_config" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#d827c506" android:text="Setelan" android:textColor="#FFF" android:padding="5dp" android:layout_margin="2dp"/>
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:background="#90fece70">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1" android:layout_gravity="center_horizontal" android:background="@drawable/background_halaman">
+			<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Viewpager CubeOut" android:layout_gravity="center_horizontal" android:background="#ff45c114" android:gravity="center" android:textColor="#ffffffff"/>
+			<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="fill_parent">
+				<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="fill_parent" android:layout_weight="2">
+					<ImageView android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ssvp_mini" android:background="@drawable/background_halaman"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1" android:padding="2dp">
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1">
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Author" android:textSize="10sp" android:textColor="#d827c506"/>
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="Kontak FB" android:textColor="#d827c506" android:textSize="10sp"/>
+						</LinearLayout>
+						<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1">
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=": Suyono (ion)" android:textColor="#d827c506" android:textSize="10sp"/>
+							<TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text=": suyono.ion" android:textStyle="italic" android:textSize="10sp" android:textColor="#d827c506"/>
+						</LinearLayout>
+					</LinearLayout>
+					<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+						<EditText android:layout_width="fill_parent" android:layout_height="fill_parent" android:ems="10" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:editable="false" android:textColor="#ffd014ff" android:text="@string/info_viewpager" android:textStyle="normal|italic" android:textSize="10sp"/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<Button android:id="@+id/buttonB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#d827c506" android:text="Mulai" android:textColor="#FFF" android:layout_marginRight="10dp" android:padding="5dp" android:layout_margin="2dp"/>
+			<Button android:id="@+id/buttonB2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/button1" android:layout_alignRight="@+id/button1" android:layout_below="@+id/button1" android:background="#d827c506" android:text="Stop" android:textColor="#FFF" android:layout_marginRight="10dp" android:padding="5dp" android:layout_margin="2dp"/>
+			<Button android:id="@+id/button_configB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#d827c506" android:text="Setelan" android:textColor="#FFF" android:padding="5dp" android:layout_margin="2dp"/>
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:gravity="center" android:layout_gravity="bottom">
+		<FrameLayout android:layout_width="match_parent" android:layout_height="45dp" android:background="#7042be12" android:layout_margin="10dp" android:layout_marginTop="32dp">
+			<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left|center_vertical" android:src="@drawable/suyono"/>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/copyright1" android:id="@+id/textView" android:layout_gravity="center" android:textColor="#ffffffff"/>
+		</FrameLayout>
+	</LinearLayout>
+</LinearLayout>
