@@ -73,7 +73,7 @@ public class tampilkanActivity extends LinearLayout {
 
             @Override
             public void onClick(View v) {
-                String url = "http://facebook.com";
+                String url = "https://github.com/suyonoion/FloatingChatheadApplistViewpager";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 getContext().startActivity(i);

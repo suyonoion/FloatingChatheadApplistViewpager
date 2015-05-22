@@ -37,7 +37,7 @@ Credit + References + Thanks:
 - Https://github.com/marshallino16/FloatingView (AppList)
 - http://stackoverflow.com/questions/13245031/how-to-implement-cube-transition-effect-animation-on-viewpager-in-android (learn)
 - http://developer.android.com/training/animation/screen-slide.html 
-- Suyonoion
+- Suyonoion ( https://www.facebook.com/suyono.ion )
 
 Notes :
 
