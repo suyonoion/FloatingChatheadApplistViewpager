@@ -1,50 +1,62 @@
 <?xml version="1.0"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#90caffca" android:orientation="vertical" android:paddingBottom="20dp" android:gravity="left">
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:background="#00000000" android:src="@mipmap/ion0"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 1" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:background="#00000000" android:src="@mipmap/ion1"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 2" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:background="#00000000" android:src="@mipmap/ion2"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 3" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#00000000" android:src="@mipmap/ion3"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 4" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#00000000" android:src="@mipmap/ion4"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 5" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#00000000" android:src="@mipmap/ion5"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 6" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton6" android:layout_width="wrap_content" android:layout_height="match_parent" android:background="#00000000" android:src="@mipmap/ion6"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 7" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton7" android:layout_width="wrap_content" android:layout_height="match_parent" android:background="#00000000" android:src="@mipmap/ion7"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 8" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton8" android:layout_width="wrap_content" android:layout_height="match_parent" android:background="#00000000" android:src="@mipmap/ion8"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 9" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton9" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="1dp" android:background="#00000000" android:src="@mipmap/ion9"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 10" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:layout_width="wrap_content" android:layout_height="match_parent" android:id="@+id/imageButtonGaruda1" android:src="@mipmap/garuda1" android:background="#00000000"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 11" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="left" android:layout_gravity="left" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_shape">
         <ImageButton android:id="@+id/imageButton10" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="1dp" android:background="#00000000" android:src="@mipmap/ion10"/>
         <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Icon 12" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>

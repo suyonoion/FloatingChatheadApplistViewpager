@@ -16,7 +16,10 @@ public class CustomAdapter extends ArrayAdapter{
     private int resource;
     private LayoutInflater inflater;
     private Context context;
-
+    public int setResource(String name, String Type)
+    {
+        return getContext().getResources().getIdentifier(name, Type, getContext().getPackageName());
+    }
     public CustomAdapter ( Context ctx, int resourceId, List apps) {
 
         super( ctx, resourceId, apps );
@@ -29,9 +32,9 @@ public class CustomAdapter extends ArrayAdapter{
     public View getView ( int position, View convertView, ViewGroup parent ) {
         convertView = (LinearLayout) inflater.inflate( resource, null );
         PInfo app = (PInfo) getItem(position);
-        TextView txtName = (TextView) convertView.findViewById(R.id.app_name);
+        TextView txtName = (TextView) convertView.findViewById(setResource("app_name","id"));
         txtName.setText(app.appname);
-        ImageView imageCity = (ImageView) convertView.findViewById(R.id.app_icon);
+        ImageView imageCity = (ImageView) convertView.findViewById(setResource("app_icon","id"));
         imageCity.setImageDrawable(app.icon);
         return convertView;
     }

@@ -18,14 +18,18 @@ import android.widget.LinearLayout;
  * licenses restricting copying, distribution and decompilation.
  */
 public class tampilkanActivity extends LinearLayout {
+    public int setResource(String name, String Type)
+    {
+        return getContext().getResources().getIdentifier(name, Type, getContext().getPackageName());
+    }
     public tampilkanActivity(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View root = inflater.inflate(R.layout.aktivity_utama, this, true);
+        View root = inflater.inflate(setResource("aktivity_utama","layout"), this, true);
 
 // Mulai jika diklik
-        Button launch = (Button) root.findViewById(R.id.button1);
+        Button launch = (Button) root.findViewById(setResource("button1","id"));
         launch.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -35,7 +39,7 @@ public class tampilkanActivity extends LinearLayout {
                 getContext().startService(intent);
             }
         });
-        Button launch1 = (Button) root.findViewById(R.id.buttonB);
+        Button launch1 = (Button) root.findViewById(setResource("buttonB","id"));
         launch1.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -46,7 +50,7 @@ public class tampilkanActivity extends LinearLayout {
             }
         });
 // Berhenti service
-        Button stop = (Button) findViewById(R.id.button2);
+        Button stop = (Button) findViewById(setResource("button2","id"));
         stop.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -56,7 +60,7 @@ public class tampilkanActivity extends LinearLayout {
                 getContext().stopService(intent);
             }
         });
-        Button stopB = (Button) root.findViewById(R.id.buttonB2);
+        Button stopB = (Button) root.findViewById(setResource("buttonB2","id"));
         stopB.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -68,34 +72,37 @@ public class tampilkanActivity extends LinearLayout {
         });
 
 // Download project
-        ImageView github = (ImageView) root.findViewById(R.id.imageView1);
+        ImageView github = (ImageView) root.findViewById(setResource("imageView1","id"));
         github.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 String url = "https://github.com/suyonoion/FloatingChatheadApplistViewpager";
                 Intent i = new Intent(Intent.ACTION_VIEW);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 i.setData(Uri.parse(url));
                 getContext().startActivity(i);
             }
         });
 // Konfigurasi
-        Button config = (Button) root.findViewById(R.id.button_config);
+        Button config = (Button) root.findViewById(setResource("button_config","id"));
         config.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(getContext(), Configurations.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 getContext().startActivity(intent);
                 getContext().stopService(new Intent(getContext(), FloatingchatheadAppList.class));
             }
         });
-        Button configB = (Button) root.findViewById(R.id.button_configB);
+        Button configB = (Button) root.findViewById(setResource("button_configB","id"));
         configB.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(getContext(), ConfigurationsB.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 getContext().startActivity(intent);
                 getContext().stopService(new Intent(getContext(), FloatingchatheadViewPager.class));
             }

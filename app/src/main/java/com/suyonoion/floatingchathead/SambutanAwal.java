@@ -14,6 +14,10 @@ public class SambutanAwal extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sambutan_awal);
+        setContentView(setResource("sambutan_awal","layout"));
+    }
+    public int setResource(String name, String Type)
+    {
+        return getBaseContext().getResources().getIdentifier(name, Type, getBaseContext().getPackageName());
     }
 }

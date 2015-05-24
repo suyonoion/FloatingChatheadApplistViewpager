@@ -64,54 +64,54 @@ public class FloatingchatheadViewPager extends Service {
 
 		windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 		chatHeadViewPager = new ImageView(this);
-		chatHeadViewPager.setImageResource(R.mipmap.suyono);
+		chatHeadViewPager.setImageResource(setResource("suyono","mipmap"));
         // mengatur icon di setting mulai
         if(prefs.getString("ikonb", "ion1").equals("ion0")){
-            chatHeadViewPager.setImageResource(R.mipmap.ion0);
+            chatHeadViewPager.setImageResource(setResource("ion0","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion1")){
-            chatHeadViewPager.setImageResource(R.mipmap.ion1);
+            chatHeadViewPager.setImageResource(setResource("ion1","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion2")){
-            chatHeadViewPager.setImageResource(R.mipmap.ion2);
+            chatHeadViewPager.setImageResource(setResource("ion2","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion3")){
-            chatHeadViewPager.setImageResource(R.mipmap.ion3);
+            chatHeadViewPager.setImageResource(setResource("ion3","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion4")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion4);
+            chatHeadViewPager.setImageResource(setResource("ion4","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion5")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion5);
+            chatHeadViewPager.setImageResource(setResource("ion5","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion6")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion6);
+            chatHeadViewPager.setImageResource(setResource("ion6","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion7")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion7);
+            chatHeadViewPager.setImageResource(setResource("ion7","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion8")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion8);
+            chatHeadViewPager.setImageResource(setResource("ion8","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion9")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion9);
+            chatHeadViewPager.setImageResource(setResource("ion9","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("ion10")) {
-            chatHeadViewPager.setImageResource(R.mipmap.ion10);
+            chatHeadViewPager.setImageResource(setResource("ion10","mipmap"));
         }
         else
         if(prefs.getString("ikonb", "ion1").equals("garuda1")) {
-            chatHeadViewPager.setImageResource(R.mipmap.garuda1);
+            chatHeadViewPager.setImageResource(setResource("garuda1","mipmap"));
         }
         // mengatur icon di setting selesai
 
@@ -171,17 +171,17 @@ public class FloatingchatheadViewPager extends Service {
             @Override
             public void onClick(View arg0) {
                 LayoutInflater inflater=(LayoutInflater) getSystemService(getApplicationContext().LAYOUT_INFLATER_SERVICE);
-                View popup = inflater.inflate(R.layout.tampilkan_viewpager, null, true);
+                View popup = inflater.inflate(setResource("tampilkan_viewpager","layout"), null, true);
                 popupViewpager = new PopupWindow(getApplicationContext());
                 popupViewpager.setContentView(popup);
                 popupViewpager.setWindowLayoutMode(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 popupViewpager.setHeight(1);
                 popupViewpager.setWidth(1);
                 popupViewpager.setFocusable(true);
-                popupViewpager.setBackgroundDrawable(getApplicationContext().getResources().getDrawable(R.drawable.popup_window));
+                popupViewpager.setBackgroundDrawable(getApplicationContext().getResources().getDrawable(setResource("popup_window","drawable")));
                 popupViewpager.showAsDropDown(chatHeadViewPager);
                 popupViewpager.showAtLocation(chatHeadViewPager, Gravity.NO_GRAVITY, 0, 0);
-                sembunyikan = (Button) popup.findViewById((R.id.sembunyikan));
+                sembunyikan = (Button) popup.findViewById((setResource("sembunyikan","id")));
                 sembunyikan.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -190,7 +190,7 @@ public class FloatingchatheadViewPager extends Service {
                         diDobelKlik = true;
                     }
                 });
-                tutup = (Button) popup.findViewById(R.id.dismiss);
+                tutup = (Button) popup.findViewById(setResource("dismiss","id"));
                 tutup.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -206,8 +206,8 @@ public class FloatingchatheadViewPager extends Service {
 	public void buatNotifikasi(){
 		Intent notificationIntent = new Intent(getApplicationContext(), FloatingchatheadViewPager.class);
 		PendingIntent pendingIntent = PendingIntent.getService(getApplicationContext(), 0, notificationIntent, 0);
-		Notification notification = new Notification(R.mipmap.suyono, getResources().getString(R.string.pemberitahuan_viewpager),System.currentTimeMillis());
-		notification.setLatestEventInfo(getApplicationContext(), getResources().getString(R.string.pemberitahuan_viewpagerjudul) ,  getResources().getString(R.string.pemberitahuan_subjudul), pendingIntent);
+		Notification notification = new Notification(setResource("suyono","mipmap"), getResources().getString(setResource("pemberitahuan_viewpager","string")),System.currentTimeMillis());
+		notification.setLatestEventInfo(getApplicationContext(), getResources().getString(setResource("pemberitahuan_viewpagerjudul","string")) ,  getResources().getString(setResource("pemberitahuan_subjudul","string")), pendingIntent);
 		notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
 		NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 		notificationManager.notify(ID_NOTIFICATION1,notification);
@@ -218,5 +218,8 @@ public class FloatingchatheadViewPager extends Service {
 		super.onDestroy();
 		if (chatHeadViewPager != null) windowManager.removeView(chatHeadViewPager);
 	}
-
+    public int setResource(String name, String Type)
+    {
+        return getBaseContext().getResources().getIdentifier(name, Type, getBaseContext().getPackageName());
+    }
 }

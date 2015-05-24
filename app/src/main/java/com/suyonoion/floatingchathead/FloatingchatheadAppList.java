@@ -61,54 +61,54 @@ public class FloatingchatheadAppList extends Service {
 		windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
 		chatHeadAppList = new ImageView(this);
-		chatHeadAppList.setImageResource(R.mipmap.suyono);
+		chatHeadAppList.setImageResource(setResource("suyono","mipmap"));
         // mengatur icon di setting mulai
         if(prefs.getString("ICON", "suyono").equals("ion0")){
-            chatHeadAppList.setImageResource(R.mipmap.ion0);
+            chatHeadAppList.setImageResource(setResource("ion0","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion1")){
-            chatHeadAppList.setImageResource(R.mipmap.ion1);
+            chatHeadAppList.setImageResource(setResource("ion1","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion2")){
-            chatHeadAppList.setImageResource(R.mipmap.ion2);
+            chatHeadAppList.setImageResource(setResource("ion2","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion3")){
-            chatHeadAppList.setImageResource(R.mipmap.ion3);
+            chatHeadAppList.setImageResource(setResource("ion3","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion4")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion4);
+            chatHeadAppList.setImageResource(setResource("ion4","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion5")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion5);
+            chatHeadAppList.setImageResource(setResource("ion5","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion6")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion6);
+            chatHeadAppList.setImageResource(setResource("ion6","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion7")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion7);
+            chatHeadAppList.setImageResource(setResource("ion7","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion8")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion8);
+            chatHeadAppList.setImageResource(setResource("ion8","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion9")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion9);
+            chatHeadAppList.setImageResource(setResource("ion9","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("ion10")) {
-            chatHeadAppList.setImageResource(R.mipmap.ion10);
+            chatHeadAppList.setImageResource(setResource("ion10","mipmap"));
         }
         else
         if(prefs.getString("ICON", "suyono").equals("garuda1")) {
-            chatHeadAppList.setImageResource(R.mipmap.garuda1);
+            chatHeadAppList.setImageResource(setResource("garuda1","mipmap"));
         }
         // mengatur icon di setting selesai
 
@@ -184,10 +184,10 @@ public class FloatingchatheadAppList extends Service {
 		try {
 			Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
 			ListPopupWindow popup = new ListPopupWindow(this);
-            popup.setBackgroundDrawable(getApplicationContext().getResources().getDrawable(R.drawable.popup_window));
+            popup.setBackgroundDrawable(getApplicationContext().getResources().getDrawable(setResource("popup_window","drawable")));
 			popup.setAnchorView(anchor);
 			popup.setWidth((int) (display.getWidth()/ 1.5));
-			popup.setAdapter(new CustomAdapter(getApplicationContext(), R.layout.tempat_app_list, listAplikasi));
+			popup.setAdapter(new CustomAdapter(getApplicationContext(), setResource("tempat_app_list","layout"), listAplikasi));
 			popup.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
@@ -216,8 +216,8 @@ public class FloatingchatheadAppList extends Service {
 		Intent notificationIntent = new Intent(getApplicationContext(), FloatingchatheadAppList.class);
 		PendingIntent pendingIntent = PendingIntent.getService(getApplicationContext(), 0, notificationIntent, 0);
 
-		Notification notification = new Notification(R.mipmap.suyono, getResources().getString(R.string.pemberitahuan_applist),System.currentTimeMillis());
-		notification.setLatestEventInfo(getApplicationContext(), getResources().getString(R.string.pemberitahuan_applistjudul) ,  getResources().getString(R.string.pemberitahuan_subjudul), pendingIntent);
+		Notification notification = new Notification(setResource("suyono","mipmap"), getResources().getString(setResource("pemberitahuan_applist","string")),System.currentTimeMillis());
+		notification.setLatestEventInfo(getApplicationContext(), getResources().getString(setResource("pemberitahuan_applistjudul","string")) ,  getResources().getString(setResource("pemberitahuan_subjudul","string")), pendingIntent);
 		notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.FLAG_ONGOING_EVENT;
 
 		NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
@@ -230,5 +230,8 @@ public class FloatingchatheadAppList extends Service {
 		super.onDestroy();
 		if (chatHeadAppList != null) windowManager.removeView(chatHeadAppList);
 	}
-
+    public int setResource(String name, String Type)
+    {
+        return getBaseContext().getResources().getIdentifier(name, Type, getBaseContext().getPackageName());
+    }
 }

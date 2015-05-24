@@ -38,7 +38,10 @@ public class tampilkanViewPager extends LinearLayout {
     private View mHalamanSembilan;
     private View mHalamanSepuluh;
 
-
+    public int setResource(String name, String Type)
+    {
+        return getContext().getResources().getIdentifier(name, Type, getContext().getPackageName());
+    }
 
 
     public tampilkanViewPager(Context context, AttributeSet attrs) {
@@ -46,19 +49,19 @@ public class tampilkanViewPager extends LinearLayout {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View root = inflater.inflate(R.layout.tempat_viewpager, this, true);
+        View root = inflater.inflate(setResource("tempat_viewpager","layout"), this, true);
 
-        viewpager = (ViewPager)root.findViewById(R.id.viewpager);
-        mHalamanSatu = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman1), null, true);
-        mHalamanDua = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman2), null, true);
-        mHalamanTiga = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman3), null, true);
-        mHalamanEmpat = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman4), null, true);
-        mHalamanLima = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman5), null, true);
-        mHalamanEnam = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman6), null, true);
-        mHalamanTujuh = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman7), null, true);
-        mHalamanDelapan = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman8), null, true);
-        mHalamanSembilan = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman9), null, true);
-        mHalamanSepuluh = inflater.inflate(getContext().getResources().getLayout(R.layout.halaman10), null, true);
+        viewpager = (ViewPager)root.findViewById(setResource("viewpager","id"));
+        mHalamanSatu = inflater.inflate(getContext().getResources().getLayout(setResource("halaman1","layout")), null, true);
+        mHalamanDua = inflater.inflate(getContext().getResources().getLayout(setResource("halaman2","layout")), null, true);
+        mHalamanTiga = inflater.inflate(getContext().getResources().getLayout(setResource("halaman3","layout")), null, true);
+        mHalamanEmpat = inflater.inflate(getContext().getResources().getLayout(setResource("halaman4","layout")), null, true);
+        mHalamanLima = inflater.inflate(getContext().getResources().getLayout(setResource("halaman5","layout")), null, true);
+        mHalamanEnam = inflater.inflate(getContext().getResources().getLayout(setResource("halaman6","layout")), null, true);
+        mHalamanTujuh = inflater.inflate(getContext().getResources().getLayout(setResource("halaman7","layout")), null, true);
+        mHalamanDelapan = inflater.inflate(getContext().getResources().getLayout(setResource("halaman8","layout")), null, true);
+        mHalamanSembilan = inflater.inflate(getContext().getResources().getLayout(setResource("halaman9","layout")), null, true);
+        mHalamanSepuluh = inflater.inflate(getContext().getResources().getLayout(setResource("halaman10","layout")), null, true);
 
         tampildaftarHalaman = new ArrayList<View>();
         tampildaftarHalaman.add(mHalamanSatu);
@@ -72,18 +75,18 @@ public class tampilkanViewPager extends LinearLayout {
         tampildaftarHalaman.add(mHalamanSembilan);
         tampildaftarHalaman.add(mHalamanSepuluh);
 
-        pagerTitleStrip = (PagerTitleStrip) findViewById(R.id.pagertitle);
+        pagerTitleStrip = (PagerTitleStrip) findViewById(setResource("pagertitle","id"));
         titlelist = new ArrayList<String>();
-        titlelist.add(getResources().getString(R.string.tab_1));
-        titlelist.add(getResources().getString(R.string.tab_2));
-        titlelist.add(getResources().getString(R.string.tab_3));
-        titlelist.add(getResources().getString(R.string.tab_4));
-        titlelist.add(getResources().getString(R.string.tab_5));
-        titlelist.add(getResources().getString(R.string.tab_6));
-        titlelist.add(getResources().getString(R.string.tab_7));
-        titlelist.add(getResources().getString(R.string.tab_8));
-        titlelist.add(getResources().getString(R.string.tab_9));
-        titlelist.add(getResources().getString(R.string.tab_10));
+        titlelist.add(getResources().getString(setResource("tab_1","string")));
+        titlelist.add(getResources().getString(setResource("tab_2","string")));
+        titlelist.add(getResources().getString(setResource("tab_3","string")));
+        titlelist.add(getResources().getString(setResource("tab_4","string")));
+        titlelist.add(getResources().getString(setResource("tab_5","string")));
+        titlelist.add(getResources().getString(setResource("tab_6","string")));
+        titlelist.add(getResources().getString(setResource("tab_7","string")));
+        titlelist.add(getResources().getString(setResource("tab_8","string")));
+        titlelist.add(getResources().getString(setResource("tab_9","string")));
+        titlelist.add(getResources().getString(setResource("tab_10","string")));
 
         adapter = new MyAdapter(titlelist, tampildaftarHalaman);
         viewpager.setPageTransformer(true, new CubeOutTransformer());
