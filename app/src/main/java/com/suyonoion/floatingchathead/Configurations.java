@@ -182,15 +182,25 @@ public class Configurations extends Activity {
 			}
 		});
 // KEMBALI KE AKTIVITI
-		Button backHome = (Button)findViewById(setResource("back_main","id"));
-		backHome.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intentMain = new Intent(Configurations.this, SambutanAwal.class);
-                intentMain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-				startActivity(intentMain);
-			}
-		});
+
+        Button launch = (Button)findViewById(setResource("back_main","id"));
+        launch.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Configurations.this, FloatingchatheadAppList.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startService(intent);
+            }
+        });
+        //tutup
+        Button tutup = (Button)findViewById(setResource("tutup_setting_a","id"));
+        tutup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 	}
 
 

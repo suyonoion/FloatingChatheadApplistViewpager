@@ -181,15 +181,25 @@ public class ConfigurationsB extends Activity {
 			}
 		});
 // KEMBALI
-		Button backHome = (Button)findViewById(setResource("back_mainB","id"));
-		backHome.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intentMain = new Intent(ConfigurationsB.this, SambutanAwal.class);
-                intentMain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-				startActivity(intentMain);
-			}
-		});
+
+        Button launch = (Button)findViewById(setResource("back_mainB","id"));
+        launch.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConfigurationsB.this, FloatingchatheadViewPager.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startService(intent);
+            }
+        });
+        //tutup
+        Button tutup = (Button)findViewById(setResource("tutup_setting_b","id"));
+        tutup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 	}
 
 	private void setPreferences(String myIconPref)
